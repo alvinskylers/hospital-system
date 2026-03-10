@@ -20,4 +20,9 @@ class UserController extends Controller
 
         return redirect('/');
     }
+
+    public function index()
+    {
+        return view('index');
+    }
 }
