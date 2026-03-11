@@ -82,9 +82,23 @@
                     <li class="nav-item">
                         <a class="nav-link" href="contact.html">Contact</a>
                     </li>
+
+                    @if(!Auth::check())
                     <li class="nav-item">
-                        <a class="btn btn-primary ml-lg-3" href="#">Login / Register</a>
+                        <a class="btn btn-primary" href="{{ route('login') }}">Login</a>
                     </li>
+                    @else
+                    <li class="nav-item">
+                        <form method="POST" action="{{ route('logout') }}">
+                            @csrf
+                            <x-dropdown-link :href="route('logout')"
+                                             onclick="event.preventDefault();
+                                                this.closest('form').submit();" class="btn btn-primary">
+                                {{ __('Log Out') }}
+                            </x-dropdown-link>
+                        </form>
+                    </li>
+                    @endif
                 </ul>
             </div> <!-- .navbar-collapse -->
         </div> <!-- .container -->
