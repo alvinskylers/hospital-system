@@ -89,6 +89,9 @@
                     </li>
                     @else
                     <li class="nav-item">
+                        <a class="nav-link" href="{{ route('dashboard') }}">Dashboard</a>
+                    </li>
+                    <li class="nav-item">
                         <form method="POST" action="{{ route('logout') }}">
                             @csrf
                             <x-dropdown-link :href="route('logout')"
@@ -98,6 +101,7 @@
                             </x-dropdown-link>
                         </form>
                     </li>
+
                     @endif
                 </ul>
             </div> <!-- .navbar-collapse -->
