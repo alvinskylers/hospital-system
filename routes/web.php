@@ -11,7 +11,7 @@ Route::get('/', [UserController::class, 'index'])->name('index');
 Route::get('/dashboard', [UserController::class, 'dashboard'])->middleware('auth', 'verified')->name('dashboard');
 
 Route::middleware('auth','admin')->group(function(){
-
+    Route::get('/doctors-add', [AdminController::class, 'addDoctors'])->name('doctors-add');
 });
 
 
