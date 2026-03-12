@@ -7,8 +7,12 @@ use App\Http\Middleware\AdminMiddleware;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', [UserController::class, 'index'])->name('index');
+Route::get('/doctors-all', [UserController::class, 'viewDoctors'])->name('doctors');
 
-Route::get('/dashboard', [UserController::class, 'dashboard'])->middleware('auth', 'verified')->name('dashboard');
+Route::middleware('auth', 'verified')->group(function () {
+    Route::get('/dashboard', [UserController::class, 'dashboard'])->middleware('auth', 'verified')->name('dashboard');
+
+});
 
 Route::middleware('auth','admin')->group(function(){
     Route::get('/doctors-add', [AdminController::class, 'addDoctorsView'])->name('doctors-add');

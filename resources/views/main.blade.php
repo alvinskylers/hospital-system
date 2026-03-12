@@ -74,7 +74,7 @@
                         <a class="nav-link" href="about.html">About Us</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="doctors.html">Doctors</a>
+                        <a class="nav-link" href="{{ route('doctors') }}">Doctors</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="blog.html">News</a>
@@ -114,6 +114,8 @@
 
 <!-- Doctor Section -->
     @yield('index')
+
+    @yield('doctors-all')
 
 <div class="page-section bg-light">
     <div class="container">
