@@ -1,6 +1,3 @@
-@extends('main')
-
-@section('hero-page')
 
     <div class="page-hero bg-image overlay-dark" style="background-image: url(frontend/assets/img/bg_image_1.jpg);">
         <div class="hero-section">
@@ -63,4 +60,3 @@
         </div> <!-- .bg-light -->
     </div> <!-- .bg-light -->
 
-@endsection
