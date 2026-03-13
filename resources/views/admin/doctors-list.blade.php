@@ -7,10 +7,20 @@
                 <h2 class="fw-bold text-dark mb-0">Medical Staff Directory</h2>
                 <p class="text-muted mb-0 small">Active personnel management</p>
             </div>
-            <a href="{{ url('add-doctor') }}" class="btn btn-primary rounded-pill px-4 fw-bold shadow-sm">
+            <a href="{{ route('doctors-add')}}" class="btn btn-primary rounded-pill px-4 fw-bold shadow-sm">
                 <i class="bi bi-plus-lg me-2"></i>Register New Doctor
             </a>
         </div>
+
+        @if(session('success-doctor-deleted'))
+            <div class="alert alert-danger alert-dismissible fade show shadow-sm d-flex align-items-center" role="alert">
+                <i class="bi bi-check-circle-fill me-2 fs-5"></i>
+
+                <div>
+                    <strong>Success!</strong> {{ session('success-doctor-deleted') }}
+                </div>
+            </div>
+        @endif
 
         <div class="row g-0">
             @foreach($doctors as $doctor)
@@ -53,12 +63,12 @@
 
                             <div class="col-md-3 text-md-end text-center border-start-md">
                                 <div class="d-inline-flex gap-3 pe-md-2">
-                                    <a href="#" class="btn btn-outline-warning btn-sm rounded-pill px-3 fw-bold border-2">
+                                    <a href="{{ route('doctor-edit', $doctor->id) }}" class="btn btn-outline-primary btn-sm rounded-pill px-3 fw-bold border-2" >
                                         <i class="bi bi-pencil-square me-1"></i> Edit
                                     </a>
-                                    <button class="btn btn-outline-danger btn-sm rounded-pill px-3 fw-bold border-2">
+                                    <a href="{{ route('doctor-delete', $doctor->id) }}" class="btn btn-outline-danger btn-sm rounded-pill px-3 fw-bold border-2" onclick="return confirm('are you sure?')">
                                         <i class="bi bi-trash3 me-1"></i> Remove
-                                    </button>
+                                    </a>
                                 </div>
                             </div>
 

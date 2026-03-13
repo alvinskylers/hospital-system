@@ -18,6 +18,8 @@ Route::middleware('auth','admin')->group(function(){
     Route::get('/doctors-add', [AdminController::class, 'addDoctorsView'])->name('doctors-add');
     Route::post('/doctors-add', [AdminController::class, 'saveDoctor'])->name('post-add-doctors');
     Route::get('/doctors-list', [AdminController::class, 'allDoctors'])->name('doctors-list');
+    Route::get('/doctor-delete/{id}', [AdminController::class, 'deleteDoctor'])->name('doctor-delete');
+    Route::get('/doctor-edit/{id}', [AdminController::class, 'editDoctor'])->name('doctor-edit');
 });
 
 
