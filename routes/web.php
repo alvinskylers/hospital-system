@@ -17,6 +17,7 @@ Route::middleware('auth', 'verified')->group(function () {
 Route::middleware('auth','admin')->group(function(){
     Route::get('/doctors-add', [AdminController::class, 'addDoctorsView'])->name('doctors-add');
     Route::post('/doctors-add', [AdminController::class, 'saveDoctor'])->name('post-add-doctors');
+    Route::get('/doctors-list', [AdminController::class, 'allDoctors'])->name('doctors-list');
 });
 
 

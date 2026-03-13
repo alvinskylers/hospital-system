@@ -102,7 +102,7 @@
                 <div class="collapse" id="ui-basic">
                     <ul class="nav flex-column sub-menu">
                         <li class="nav-item"> <a class="nav-link" href="{{ route('doctors-add') }}">Add Doctors</a></li>
-                        <li class="nav-item"> <a class="nav-link" href="pages/ui-features/dropdowns.html">Dropdowns</a></li>
+                        <li class="nav-item"> <a class="nav-link" href="{{ route('doctors-list') }}">Doctors List</a></li>
                         <li class="nav-item"> <a class="nav-link" href="pages/ui-features/typography.html">Typography</a></li>
                     </ul>
                 </div>
@@ -311,6 +311,7 @@
         <!-- partial -->
         <div class="main-panel">
             @yield('doctors-add')
+            @yield('doctors-list')
         </div>
         <!-- main-panel ends -->
     </div>

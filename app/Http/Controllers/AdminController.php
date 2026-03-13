@@ -30,4 +30,10 @@ class AdminController extends Controller
 
         return redirect()->back()->with('success-doctor-added', 'Doctor Added Successfully');
     }
+
+    public function allDoctors()
+    {
+        $doctors = Doctor::all();
+        return view('admin.doctors-list', compact('doctors'));
+    }
 }
