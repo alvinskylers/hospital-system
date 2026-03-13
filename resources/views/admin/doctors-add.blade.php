@@ -31,7 +31,7 @@
 
                     <div class="mb-3">
                         <label class="form-label fw-bold">Speciality</label>
-                        <input type="text" class="form-control" name="doctor_speciality" placeholder="Enter speciality">
+                        <input type="text" class="form-control" name="doctor_specialty" placeholder="Enter speciality">
                     </div>
 
                     <div class="row mb-3">

@@ -11,7 +11,7 @@ Route::get('/doctors-all', [UserController::class, 'viewDoctors'])->name('doctor
 
 Route::middleware('auth', 'verified')->group(function () {
     Route::get('/dashboard', [UserController::class, 'dashboard'])->middleware('auth', 'verified')->name('dashboard');
-
+    Route::post('appointment', [UserController::class, 'bookAppointment'])->middleware('auth', 'verified')->name('appointment');
 });
 
 Route::middleware('auth','admin')->group(function(){
