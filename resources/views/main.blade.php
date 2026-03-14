@@ -220,23 +220,23 @@
             @csrf
             <div class="row mt-5 ">
                 <div class="col-12 col-sm-6 py-2 wow fadeInLeft">
-                    <input type="text" class="form-control" placeholder="Full name">
+                    <input type="text" class="form-control" placeholder="Full name" name="full_name">
                 </div>
                 <div class="col-12 col-sm-6 py-2 wow fadeInRight">
-                    <input type="text" class="form-control" placeholder="Email address..">
+                    <input type="text" class="form-control" placeholder="Email address.." name="email_address">
                 </div>
                 <div class="col-12 col-sm-6 py-2 wow fadeInLeft" data-wow-delay="300ms">
-                    <input type="date" class="form-control">
+                    <input type="date" class="form-control" name="submission_date">
                 </div>
                 <div class="col-12 col-sm-6 py-2 wow fadeInRight" data-wow-delay="300ms">
-                    <select name="departement" id="departement" class="custom-select">
+                    <select name="speciality" id="department" class="custom-select">
                         @foreach($doctors as $doctor)
                         <option value="{{ $doctor->doctor_specialty }}">{{ $doctor->doctor_name }}: {{ $doctor->doctor_specialty }}</option>
                         @endforeach
                     </select>
                 </div>
                 <div class="col-12 py-2 wow fadeInUp" data-wow-delay="300ms">
-                    <input type="text" class="form-control" placeholder="Number..">
+                    <input type="text" class="form-control" placeholder="Number.." name="number">
                 </div>
                 <div class="col-12 py-2 wow fadeInUp" data-wow-delay="300ms">
                     <textarea name="message" id="message" class="form-control" rows="6" placeholder="Enter message.."></textarea>

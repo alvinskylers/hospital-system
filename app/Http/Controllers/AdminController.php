@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Appointment;
 use App\Models\Doctor;
 use Illuminate\Http\Request;
 
@@ -69,5 +70,11 @@ class AdminController extends Controller
         }
 
         return redirect()->back()->with('success-doctor-updated', 'Doctor Information Updated Successfully');
+    }
+
+    public function viewAppointments()
+    {
+        $appointments = Appointment::all();
+        return view('admin.appointments-view', compact('appointments'));
     }
 }

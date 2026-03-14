@@ -103,16 +103,15 @@
                     <ul class="nav flex-column sub-menu">
                         <li class="nav-item"> <a class="nav-link" href="{{ route('doctors-add') }}">Add Doctors</a></li>
                         <li class="nav-item"> <a class="nav-link" href="{{ route('doctors-list') }}">Doctors List</a></li>
-                        <li class="nav-item"> <a class="nav-link" href="pages/ui-features/typography.html">Typography</a></li>
                     </ul>
                 </div>
             </li>
             <li class="nav-item menu-items">
-                <a class="nav-link" href="pages/forms/basic_elements.html">
+                <a class="nav-link" href="{{ route('appointments-view') }}">
               <span class="menu-icon">
                 <i class="mdi mdi-playlist-play"></i>
               </span>
-                    <span class="menu-title">Form Elements</span>
+                    <span class="menu-title">Appointments</span>
                 </a>
             </li>
             <li class="nav-item menu-items">
@@ -313,6 +312,7 @@
             @yield('doctors-add')
             @yield('doctors-list')
             @yield('doctors-edit')
+            @yield('appointments-view')
         </div>
         <!-- main-panel ends -->
     </div>

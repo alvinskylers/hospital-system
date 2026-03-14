@@ -21,8 +21,8 @@ Route::middleware('auth','admin')->group(function(){
     Route::get('/doctor-delete/{id}', [AdminController::class, 'deleteDoctor'])->name('doctor-delete');
     Route::get('/doctor-edit/{id}', [AdminController::class, 'editDoctor'])->name('doctors-edit');
     Route::post('/doctor-update/{id}', [AdminController::class, 'updateDoctor'])->name('doctor-update');
+    Route::get('/appointments-all', [AdminController::class, 'viewAppointments'])->name('appointments-view');
 });
-
 
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
