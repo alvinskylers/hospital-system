@@ -63,7 +63,7 @@
 
                             <div class="col-md-3 text-md-end text-center border-start-md">
                                 <div class="d-inline-flex gap-3 pe-md-2">
-                                    <a href="{{ route('doctor-edit', $doctor->id) }}" class="btn btn-outline-primary btn-sm rounded-pill px-3 fw-bold border-2" >
+                                    <a href="{{ route('doctors-edit', $doctor->id) }}" class="btn btn-outline-primary btn-sm rounded-pill px-3 fw-bold border-2" >
                                         <i class="bi bi-pencil-square me-1"></i> Edit
                                     </a>
                                     <a href="{{ route('doctor-delete', $doctor->id) }}" class="btn btn-outline-danger btn-sm rounded-pill px-3 fw-bold border-2" onclick="return confirm('are you sure?')">

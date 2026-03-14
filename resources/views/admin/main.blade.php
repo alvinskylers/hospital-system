@@ -312,6 +312,7 @@
         <div class="main-panel">
             @yield('doctors-add')
             @yield('doctors-list')
+            @yield('doctors-edit')
         </div>
         <!-- main-panel ends -->
     </div>
